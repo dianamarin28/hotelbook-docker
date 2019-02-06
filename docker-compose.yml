@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mysql-server:
+             build: ./mysql-server
+             volumes:
+             - C:/Users/Diana/Desktop/hotelbook-docker/mysql-server/mysql:/var/lib/mysql   
+  tomcat-serverapp:
+             build: ./tomcat-server
+             ports: 
+              - "8080:8080"
+  tomcat-clientapp:
+             build: ./tomcat-client
+             ports: 
+              - "8081:8080"
